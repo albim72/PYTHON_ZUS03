@@ -45,3 +45,27 @@ for author,titles in library_by_author.items():
     print(f"\nAutor: {author}")
     for title,year in titles:
         print(f" -> '{title}' ({year})")
+
+#operacje na kolekcjach:
+print("\nWybrane operacje na kolekcjach:")
+
+#Lista  dodanie nowej książki
+books.append(("Solaris","Stanisław Lem",1961))
+print(f"Dodano nową książkę. Liczba książek: {len(books)}\n")
+
+#Zbiór - sprawdzenie czy autor istnieje
+author_to_check = "Stanisław Lem"
+if author_to_check in authors:
+    print(f"Autor {author_to_check} jest już w bibliotece.")
+else:
+    print(f"Dodajemy nowego autora: {author_to_check}")
+    authors.add(author_to_check)
+
+#Słownik  - dostęp do książek konkretnego autora
+author_lookup = "Bolesław Prus"
+if author_lookup in library_by_author:
+    print(f"\nKsiążki autora: {author_lookup}")
+    for title, year in library_by_author[author_lookup]:
+        print(f" - '{title}' ({year})")
+else:
+    print(f"Brak książek autora {author_lookup}")
