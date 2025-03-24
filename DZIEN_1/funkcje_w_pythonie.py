@@ -7,3 +7,11 @@ def factorial(n):
     return n*factorial(n-1)
 
 print(f"Silnia z 7 wynosi: {factorial(7)}")
+
+#przykład 2 - funkcja przetwarzająca listę /filtrowanie liczb parzystch/
+def filter_even(numbers):
+    return [num for num in numbers if num%2==0]
+    #list comprehension  - rodzaj funkcji anonimowej zamknięty wewnątrz kolekcji
+
+liczby = [5,2,8,3,23,78,9,32,6,8,0,-23,57,43,68,44,66,11,12]
+print(filter_even(liczby))
