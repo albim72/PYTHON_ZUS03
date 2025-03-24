@@ -13,8 +13,8 @@ import re
 def process_documents(docs:List[str],analisys_fn:Callable[[str],Dict[str,int]]) -> Dict[str,int]:
     """
     Funkcja wyższego rzędu, która analizuje listę dokumentów
-    :param docs: 
-    :param analisys_fn: 
+    :param docs:
+    :param analisys_fn:
     :return: zwraca informację o liczbie wystąpień każdego słowa we wszystkich dokmentach - globalnie
     """
     aggregate_counter = Counter()
@@ -27,10 +27,19 @@ def process_documents(docs:List[str],analisys_fn:Callable[[str],Dict[str,int]]) 
 def word_frequency_analisys(text:str) -> Dict[str,int]:
     """
     funkcja analizy tekstu dokumentu
-    :param text: 
+    :param text:
     :return: częstotliwosc wystąpien słów dłuższych niż 3 znaki pomojając stopwords
     """
     stopwords = {'the','and','this','that','with','from','which'}
     words = re.findall(r'\b\w+\b',text.lower())
     filtered_words = [w for w in words if len(w)>3 and w not in stopwords]
     return dict(Counter(filtered_words))
+
+documents = [
+    "This is a sample document with some sample text and additional sample data.",
+    "Another document, which contains different text and information from the first one.",
+    "Text mining and natural language processing are interesting fields."
+]
+
+result = process_documents(documents,word_frequency_analisys)
+print(result)
