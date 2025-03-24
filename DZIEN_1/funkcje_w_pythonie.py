@@ -15,3 +15,13 @@ def filter_even(numbers):
 
 liczby = [5,2,8,3,23,78,9,32,6,8,0,-23,57,43,68,44,66,11,12]
 print(filter_even(liczby))
+
+#przykład 3 - funkcja operująca na słowniku - zliczanie wystąpień słów
+def word_count(text):
+    words = text.lower().split()
+    counts = {}
+    for word in words:
+        counts[word] = counts.get(word,0) + 1
+    return counts
+
+print(word_count("Hello world hello Python Python world Hello everybody"))
