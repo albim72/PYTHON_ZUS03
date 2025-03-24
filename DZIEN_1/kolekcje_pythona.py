@@ -10,3 +10,13 @@ books = [
     ("Quo Vadis","Henryk Sienkiewicz",1896),
     ("Faraon","Bolesław Prus",1897)
 ]
+
+# Krotka(tuple): stała reprezentująca godziny otwarcia
+
+opening_hours = ("9:00","17:00")
+
+#Zbiór(set): zbiór unikalnych autorów
+authors = set()
+
+#Słownik(dict): książki napisane przez wybranego autora
+library_by_author = {}
