@@ -38,3 +38,18 @@ def log_and_time(func):
         print(f"[LOG] Czas wykonania: {duration:.4f} sekundy")
         return result
     return wrapper
+
+#przykłady użycia
+@log_and_time
+def compute_sum(a,b):
+    time.sleep(1)
+    return a+b
+
+@log_and_time
+def slow_mltiply(a,b):
+    time.sleep(2)
+    return a*b
+
+compute_sum(10,20)
+print("_"*50)
+slow_mltiply(a=6,b=8)
