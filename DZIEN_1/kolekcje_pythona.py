@@ -20,3 +20,5 @@ authors = set()
 
 #Słownik(dict): książki napisane przez wybranego autora
 library_by_author = {}
+
+print(f"Godziny otwarcia biblioteki: {opening_hours[0]} - {opening_hours[1]}\n")
