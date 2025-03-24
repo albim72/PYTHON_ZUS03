@@ -39,3 +39,26 @@ def show_info(*args,**kwargs):
     print(f"Słownik argumentów: {kwargs}")
 
 show_info(1,3,7,name="Leon",age=60)
+
+#przykład 6 > praktyczne użycie finkcji z args i kwargs
+def create_order(client_name,*dishes,**extras):
+    print(f"Zamówienie dla {client_name}")
+
+    if dishes:
+        print("Zamówienie dnia:")
+        for dish in dishes:
+            print(f" - {dish}")
+    else:
+        print("Brak zamówionych dań!")
+
+    if extras:
+        print("\nDodatkowe opcje:")
+        for key,value in extras.items():
+            print(f" - {key.replace('_',' ').capitalize()}: {value}")
+    else:
+        print(f"\nBrak dodatkowych opcji!")
+    print("\nZamówienie zostało przyjęte!")
+
+create_order("Anna","Pizza Margerita","Lasagne",napoj="Cola",sos="Czosnkowy")
+create_order("Tomek",sos="pikantny",uwagi="bez glutenu!")
+create_order("Marta","Burger","Frytki","Sałatka")
