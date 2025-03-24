@@ -24,4 +24,18 @@ def word_count(text):
         counts[word] = counts.get(word,0) + 1
     return counts
 
-print(word_count("Hello world hello Python Python world Hello everybody"))
+print(word_count("Hello world hello Python Python world Hello everybody")),
+
+#przykład 4 -> funkcja z domyślnymi argumentami - generowanie powitania
+def greet(name="Guest"):
+    return f"Hello {name}!"
+
+print(greet())
+print(greet("Piotr"))
+
+#przykład 5 -> funkcja przyjmująca args i kwargs
+def show_info(*args,**kwargs):
+    print(f"Lista argumentów: {args}")
+    print(f"Słownik argumentów: {kwargs}")
+
+show_info(1,3,7,name="Leon",age=60)
