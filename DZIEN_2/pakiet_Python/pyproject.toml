@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.1.0","wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "textutils"
+version = "0.1.0"
+description = "proste narzędzia procesowania tekstu"
+readme = "README.md"
+license = {text="MIT"}
+authors = [
+    {name="Marcin",email="ex@info.pl"}
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/albim72/textutils"
