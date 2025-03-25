@@ -1,0 +1,6 @@
+Tworzymy specyficzną wersję klasynej konstrukcji switch-case
+ktora będzie posiadała następujące cechy:
+- obsługa wielu przypadków na raz
+- obsługa równoległych odpowiedzi(wiele akcji dla jednego przypadku)
+- będzie pozwalała na wielokrotne przypisanie tych samych akcji
+- będzie czytelna i rozszerzalna
