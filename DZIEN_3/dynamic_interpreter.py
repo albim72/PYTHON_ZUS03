@@ -31,3 +31,23 @@ print(namespace['math'].sqrt(16))
 
 
 # print(math.sqrt(23))
+
+print("_"*60)
+#tworzenie i użycie klasy w osobnym namespace
+
+def run_user_class():
+    user_code = '''
+class Greeter:
+    def __init__(self,name):
+        self.name = name
+            
+    def greet(self):
+        return f"Hello, {self.name}!"
+greeter = Greeter("Maria")
+result = greeter.greet()
+    '''
+    local_namesapce = {}
+    exec(user_code,{},local_namesapce)
+    return local_namesapce['result']
+
+print(run_user_class())
