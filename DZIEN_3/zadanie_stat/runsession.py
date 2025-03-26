@@ -1,4 +1,6 @@
 class RunSession:
+    CALORIES_PER_KM = 60  # Stała: średnie spalanie kcal na 1 km
+
     def __init__(self, distance_km:float, time_minutes:float, calories_burned:int):
         self.distance_km = distance_km          # przebyty dystans w kilometrach
         self.time_minutes = time_minutes        # czas biegu w minutach
@@ -11,6 +13,12 @@ class RunSession:
         if self.distance_km == 0:
             return 0
         return self.time_minutes / self.distance_km
+
+    def estimate_calories(self):
+        """
+        Szacuje spalone kalorie na podstawie przebytego dystansu
+        """
+        return self.distance_km * RunSession.CALORIES_PER_KM
 
     @staticmethod
     def calculate_bmi(weight_kg, height_cm):
