@@ -9,6 +9,10 @@ class Book:
     pages:int
     binding:str = "Paperback"
 
+    #jawne wypisanie funkcji init doprowadza do destrukcji domyślnego init() zbudowanego na bazie zdefiniowanych pól
+    # def __init__(self,isbn):
+    #     self.isbn= isbn
+
     def age(self)->int:
         current_year = date.today().year
         return current_year - self.published_year
