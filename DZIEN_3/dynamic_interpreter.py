@@ -18,3 +18,16 @@ namespace = run_user_code(user_code)
 print(namespace['result'])
 
 print("_"*60)
+#dynamiczny import modułu w osobnym namespace
+def dynamic_import(module_name):
+    module_namespace = {}
+    exec(f"import {module_name}",module_namespace)
+
+    return module_namespace
+
+
+namespace = dynamic_import('math')
+print(namespace['math'].sqrt(16))
+
+
+# print(math.sqrt(23))
