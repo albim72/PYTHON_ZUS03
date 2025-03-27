@@ -16,9 +16,12 @@ async def async_download(executor, url):
 
 async def main():
     urls = [
-        "https://www.example.com",
-        "https://www.python.org",
-        "https://www.wikipedia.org"
+        "https://www.foxnews.com/",
+    "https://edition.cnn.com/",
+    "https://www.bbc.com/",
+    "https://www.wp.pl/",
+    "https://www.gov.pl/web/obrona-narodowa",
+    "https://mil.ru/"
     ]
     
     # Pool wątków dla operacji I/O
