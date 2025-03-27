@@ -7,7 +7,7 @@ book3 = Book("Brave New World","Aldous Huxley",1932,"zielona")
 book4 = Book("Wiedźmin","Andrzej Sapkowski",1986,"czerwono-czarna")
 
 #opisy książek
-print(book1.description)
-print(book2.description)
-print(book3.description)
-print(book4.description)
+for book in (book1,book2,book3,book4):
+    print(book.description)
+    print(f"Wiek książki: {book.age()} lat\n")
+    print("*"*60)
