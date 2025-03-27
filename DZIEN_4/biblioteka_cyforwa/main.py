@@ -1,3 +1,5 @@
+from library_system import *
+
 if __name__ == "__main__":
     author1 = Author("George", "Orwell", 1903)
     author2 = Author("Harper", "Lee", 1926)
