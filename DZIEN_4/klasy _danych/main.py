@@ -1,4 +1,6 @@
 from simpledt import Book,Author
+from konferencja import Event
+from datetime import datetime, timedelta
 
 print("______ przykład 1 -> prosta dataclass Book ________")
 
@@ -23,3 +25,18 @@ for book in books_sorted:
     print(book.description)
     print(f"wiek książki: {book.age()} lat")
     print("*"*60)
+
+print("______ przykład 2 -> wyliczenie czasu trwania Eventu ________")
+event1 = Event(
+    name="Konferencja IntelliAI",
+    start_date=datetime(2025,6,12,9,0),
+    end_date=datetime(2025,6,16,18,30)
+)
+print(event1.descrption)
+
+event2 = Event(
+    name="Spotkanie projektowe",
+    start_date=datetime(2025,5,10,17,15),
+    end_date=datetime(2025,5,10,13,50)
+)
+print(event2.descrption)
