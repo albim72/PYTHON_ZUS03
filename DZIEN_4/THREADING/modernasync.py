@@ -1,7 +1,7 @@
 import asyncio
 from concurrent.futures import ThreadPoolExecutor
 import time
-import requestshttps://github.com/albim72/PYTHON_ZUS03/tree/main/DZIEN_4/THREADING
+import requests
 
 # Funkcja blokująca (I/O-bound), np. pobieranie pliku
 def download_url(url):
