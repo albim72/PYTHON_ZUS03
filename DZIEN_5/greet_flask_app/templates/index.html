@@ -1,1 +1,19 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formularz Flask</title>
+</head>
+<body>
+    <h1>Podaj swoje imię</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="podaj twoje imię" required>
+        <input type="submit" value="wyślij">
+    </form>
+
+    {% if name %}
+        <h2>Witaj, {{name}}</h2>
+    {% endif %}
+</body>
+</html>
