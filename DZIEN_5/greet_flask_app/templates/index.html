@@ -33,7 +33,12 @@
             </tr>
             {% endfor %}
         </table>
-
+        <h2>Dodaj nową osobę:</h2>
+        <form method="POST">
+            <input type="text" name="new_name" placeholder="podaj imię" required>
+            <input type="number" name="new_age" placeholder="podaj wiek" required min="0">
+            <input type="submit" value="Dodaj osobę">
+        </form>
     </div>
 
 </body>
