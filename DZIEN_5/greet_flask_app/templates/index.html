@@ -1,19 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>formularz Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
 </head>
 <body>
-    <h1>Podaj swoje imię</h1>
-    <form method="POST">
-        <input type="text" name="name" placeholder="podaj twoje imię" required>
-        <input type="submit" value="wyślij">
-    </form>
+    <div class="container">
+        <img src="{{ url_for('static',filename='images/logo.png') }}" alt="LOGO" class="logo">
+        <h1>Podaj swoje imię</h1>
+        <form method="POST">
+            <input type="text" name="name" placeholder="podaj twoje imię" required>
+            <input type="submit" value="wyślij">
+        </form>
 
-    {% if name %}
-        <h2>Witaj, {{name}}</h2>
-    {% endif %}
+        {% if name %}
+            <h2>Witaj, {{name}}</h2>
+        {% endif %}
+
+        <h2>Dane osobowe zespołu:</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Imię</th>
+                <th>Wiek</th>
+            </tr>
+            {% for person in people %}
+            <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ person.age }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
 </body>
 </html>
