@@ -1,13 +1,13 @@
-def powitanie(imie:str,wiek:int) -> str:
-    return f"Cześc {imie}, masz {wiek} lat"
+from flask import Flask,render_template,request
 
-print(powitanie("Piotr",45))
-print(powitanie(True,11))
-print(powitanie(3245234233,"dwa"))
+app = Flask(__name__)
 
-from typing import List
+@app.route('/',methods=['GET','POST'])
+def index():
+    name = None
+    if request.method == 'POST':
+        name = request.form.get('name')
+    return render_template('index.html',name=name)
 
-def suma_liczb(liczby:List[int])->int:
-    return sum(liczby)
-
-print(suma_liczb([5,7,3,78,True]))
+if __name__ == '__main__':
+    app.run(debug=True)
