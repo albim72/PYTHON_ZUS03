@@ -1,0 +1,9 @@
+fetch("http://127.0.0.1:5000/add", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ a: 12, b: 8 })
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
